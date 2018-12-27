@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Alex.Kingdee.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Alex.Kingdee.Core.Attributes.FieldTypeAttribute">
+            <inheritdoc />
+            <summary>
+            K3Cloud 字段类型与实体数据填充数据类型
+            </summary>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Attributes.FieldTypeAttribute.Ignore">
+            <summary>
+            是否忽略
+            </summary>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Attributes.FieldTypeAttribute.IsFlex">
+            <summary>
+            是否是维度关键字
+            </summary>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Attributes.FieldTypeAttribute.Key">
+            <summary>
+            对应的字段标志,若是单据体则为单据体标志,若是单据头则为单据标志,如果对应多个标志请用','隔开
+            </summary>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Attributes.FieldTypeAttribute.OrmKey">
+            <summary>
+            Orm实体名
+            </summary>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Attributes.FieldTypeAttribute.IsEntity">
+            <summary>
+            是否是分录,若为单据体,数据类型必须是IList的
+            </summary>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Attributes.FieldTypeAttribute.IsMultiObj">
+            <summary>
+            是否是多维度数据
+            </summary>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Attributes.FieldTypeAttribute.InvokeUpdateService">
+            <summary>
+            是否触发值更新
+            </summary>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Attributes.FieldTypeAttribute.Number">
+            <summary>
+            编码字段名称
+            </summary>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Attributes.FieldTypeAttribute.AssignMode">
+            <summary>
+            赋值模式
+            </summary>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Attributes.FieldTypeAttribute.ExtData1">
+            <summary>
+            额外参数1
+            </summary>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Attributes.FieldTypeAttribute.ExtData2">
+            <summary>
+            额外参数2
+            </summary>
+        </member>
+        <member name="T:Alex.Kingdee.Core.Attributes.AssignMode">
+            <summary>
+            赋值模式
+            </summary>
+        </member>
+        <member name="F:Alex.Kingdee.Core.Attributes.AssignMode.ByNumber">
+            <summary>
+            通过编码赋值
+            </summary>
+        </member>
+        <member name="F:Alex.Kingdee.Core.Attributes.AssignMode.ByValue">
+            <summary>
+            通过值赋值
+            </summary>
+        </member>
+        <member name="F:Alex.Kingdee.Core.Attributes.AssignMode.ById">
+            <summary>
+            通过Id赋值
+            </summary>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Extension.Common.EDataColumnCollection.ForEach(System.Data.DataColumnCollection,System.Func{System.Data.DataColumn,System.Int32,System.Boolean})">
+            <summary>
+            foreach循环
+            </summary>
+            <param name="ie"></param>
+            <param name="action">item 当前循环值, index 下标 返回false则中断执行,相当于break</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Extension.Common.EDataColumnCollection.ForEach(System.Data.DataColumnCollection,System.Action{System.Data.DataColumn,System.Int32})">
+            <summary>
+            foreach循环
+            </summary>
+            <param name="ie"></param>
+            <param name="action">item 当前循环值, index 下标</param>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Extension.Common.EDataRowCollection.ForEach(System.Data.DataRowCollection,System.Func{System.Data.DataRow,System.Int32,System.Boolean})">
+            <summary>
+            foreach循环
+            </summary>
+            <param name="ie"></param>
+            <param name="action">item 当前循环值, index 下标 返回false则中断执行,相当于break</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Extension.Common.EDataRowCollection.ForEach(System.Data.DataRowCollection,System.Action{System.Data.DataRow,System.Int32})">
+            <summary>
+            foreach循环
+            </summary>
+            <param name="ie"></param>
+            <param name="action">item 当前循环值, index 下标</param>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Extension.Common.EiEnumerable.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32,System.Boolean})">
+            <summary>
+            foreach循环
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ie"></param>
+            <param name="action">item 当前循环值, index 下标 返回false则中断执行,相当于break</param>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Extension.Common.EiEnumerable.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Int32})">
+            <summary>
+            foreach循环
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ie"></param>
+            <param name="action">item 当前循环值, index 下标</param>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Extension.Common.EObject.TypeCast``1(System.Object,``0)">
+            <summary>
+            类型转换
+            </summary>
+            <typeparam name="T">目标类型</typeparam>
+            <param name="obj">需要转换的值</param>
+            <param name="value">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Extension.Common.EObject.DeepCopy``1(System.Object)">
+            <summary>
+            深拷贝
+            </summary>
+            <typeparam name="T">需要返回的值类型</typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Extension.Common.EObject.TypeCast``1(System.Object,System.Object,``0)">
+            <summary>
+            安全类型转换
+            </summary>
+            <typeparam name="T">目标类型</typeparam>
+            <param name="obj"></param>
+            <param name="data">需要转换的值</param>
+            <param name="value">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Extension.Common.EString.EqualsIgnoreCase(System.String,System.String)">
+            <summary>
+            忽略大小写的比较
+            </summary>
+            <param name="s"></param>
+            <param name="a">带比较值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Extension.Common.EString.EqualsIgnoreCase(System.String,System.String[])">
+            <summary>
+            忽略大小写的比较,只要有一个满足就返回true
+            </summary>
+            <param name="s"></param>
+            <param name="arr">待比较值的集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Extension.Common.EString.Contains(System.String,System.String,System.StringComparison)">
+            <summary>
+            源字符串中是否存在目标值
+            </summary>
+            <param name="source"></param>
+            <param name="value">目标值</param>
+            <param name="comparisonType">比较方式</param>
+            <returns></returns>
+        </member>
+        <member name="T:Alex.Kingdee.Core.Model.BillAction">
+            <summary>
+            操作参数
+            </summary>
+        </member>
+        <member name="F:Alex.Kingdee.Core.Model.BillAction.Save">
+            <summary>
+            保存
+            </summary>
+        </member>
+        <member name="F:Alex.Kingdee.Core.Model.BillAction.Draft">
+            <summary>
+            暂存
+            </summary>
+        </member>
+        <member name="F:Alex.Kingdee.Core.Model.BillAction.Submit">
+            <summary>
+            提交
+            </summary>
+        </member>
+        <member name="F:Alex.Kingdee.Core.Model.BillAction.Audit">
+            <summary>
+            审核
+            </summary>
+        </member>
+        <member name="F:Alex.Kingdee.Core.Model.BillAction.Other">
+            <summary>
+            其他
+            </summary>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Model.CommonArgs.GetParameter``1(System.String)">
+            <summary>
+            获取配置文件中的参数
+            </summary>
+            <param name="key">键值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Model.CommonArgs.GetParameter(System.String)">
+            <summary>
+            获取配置文件中的参数
+            </summary>
+            <param name="key">键值</param>
+            <returns></returns>
+        </member>
+        <member name="T:Alex.Kingdee.Core.Model.IBilHead">
+            <summary>
+            单据数据
+            </summary>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Model.IBilHead.TimeStamp">
+            <summary>
+            时间戳(毫秒)
+            </summary>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Model.IBilHead.Sign">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="T:Alex.Kingdee.Core.Model.OperateResult`2">
+            <summary>
+            操作结果
+            </summary>
+            <typeparam name="T">Data类型</typeparam>
+            <typeparam name="TV">Ext类型</typeparam>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Model.OperateResult`2.IsSuccess">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Model.OperateResult`2.Msg">
+            <summary>
+            信息
+            </summary>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Model.OperateResult`2.Ext">
+            <summary>
+            附加信息
+            </summary>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Model.OperateResult`2.Data">
+            <summary>
+            返回数据
+            </summary>
+        </member>
+        <member name="T:Alex.Kingdee.Core.Utils.HttpUtils">
+            <summary>
+            Http工具
+            </summary>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Utils.HttpUtils.ReadStringFromRequest(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            读取request 的提交内容
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Utils.HttpUtils.ReadStringFromResponse(System.Net.Http.HttpResponseMessage)">
+            <summary>
+            读取response返回的result
+            </summary>
+            <param name="response"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Utils.HttpUtils.ReadStringFromStream(System.IO.Stream,System.Boolean)">
+            <summary>
+            从流中获取内容
+            </summary>
+            <param name="stream">流</param>
+            <param name="dispose">是否释放资源</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

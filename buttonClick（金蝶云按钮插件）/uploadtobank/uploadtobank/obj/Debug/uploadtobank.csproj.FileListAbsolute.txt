@@ -1,0 +1,7 @@
+E:\顺宏安结算单接口方案\buttonClick\uploadtobank\uploadtobank\bin\Debug\uploadtobank.dll
+E:\顺宏安结算单接口方案\buttonClick\uploadtobank\uploadtobank\bin\Debug\uploadtobank.pdb
+E:\顺宏安结算单接口方案\buttonClick\uploadtobank\uploadtobank\bin\Debug\Kingdee.BOS.Core.dll
+E:\顺宏安结算单接口方案\buttonClick\uploadtobank\uploadtobank\obj\Debug\uploadtobank.csproj.CoreCompileInputs.cache
+E:\顺宏安结算单接口方案\buttonClick\uploadtobank\uploadtobank\obj\Debug\uploadtobank.csproj.CopyComplete
+E:\顺宏安结算单接口方案\buttonClick\uploadtobank\uploadtobank\obj\Debug\uploadtobank.dll
+E:\顺宏安结算单接口方案\buttonClick\uploadtobank\uploadtobank\obj\Debug\uploadtobank.pdb

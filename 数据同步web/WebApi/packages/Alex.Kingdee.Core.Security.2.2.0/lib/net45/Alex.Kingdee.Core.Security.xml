@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Alex.Kingdee.Core.Security</name>
+    </assembly>
+    <members>
+        <member name="T:Alex.Kingdee.Core.Security.Model.RsaInfo">
+            <summary>
+            RSA 信息
+            </summary>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Model.RsaInfo.#ctor(System.String,System.String)">
+            <summary>
+            初始化
+            </summary>
+            <param name="publicKey">公钥</param>
+            <param name="privateKey">私钥</param>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Security.Model.RsaInfo.PrivateKey">
+            <summary>
+            私钥
+            </summary>
+        </member>
+        <member name="P:Alex.Kingdee.Core.Security.Model.RsaInfo.PublicKey">
+            <summary>
+            公钥
+            </summary>
+        </member>
+        <member name="T:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper">
+            <summary>
+            RSA PCKS12证书帮助类
+            </summary>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.SignDataWithPkcs12(System.String,System.String,System.Byte[],System.String)">
+            <summary>
+            签名
+            </summary>
+            <param name="p12Cert">P12/PFX证书的 base64格式</param>
+            <param name="certPwd">证书密码</param>
+            <param name="contentData">要签名的数据</param>
+            <param name="signAlgorithm">签名算法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.SignDataWithPkcs12(System.Byte[],System.Char[],System.Byte[],System.String)">
+            <summary>
+            签名
+            </summary>
+            <param name="p12CertData">P12/PFX证书</param>
+            <param name="certPwdData">证书密码</param>
+            <param name="contentData">要签名的数据</param>
+            <param name="signAlgorithm">签名算法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.VerifyDataWithX509(System.String,System.Byte[],System.String,System.String)">
+            <summary>
+            验签
+            </summary>
+            <param name="x509Cert">x509通用证书base64格式</param>
+            <param name="content">原始数据</param>
+            <param name="sign">签名结果base64格式</param>
+            <param name="signAlgorithm">签名算法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.VerifyDataWithX509(System.Byte[],System.Byte[],System.Byte[],System.String)">
+            <summary>
+            验签
+            </summary>
+            <param name="x509CertData">x509通用证书</param>
+            <param name="contentData">原始数据</param>
+            <param name="signData">签名结果</param>
+            <param name="signAlgorithm">签名算法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.GetPrivateKeyFromPkcs12(System.String,System.String)">
+            <summary>
+            获取RSA私钥
+            </summary>
+            <param name="p12Cert">P12/PFX证书的 base64格式</param>
+            <param name="certPwd">证书密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.GetPrivateKeyFromPkcs12(System.Byte[],System.Char[])">
+            <summary>
+            获取RSA私钥
+            </summary>
+            <param name="p12CertData">P12/PFX证书</param>
+            <param name="certPwdData">证书密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.GetPublicKeyFromPkcs12(System.String,System.String)">
+            <summary>
+            获取RSA公钥
+            </summary>
+            <param name="p12Cert">P12/PFX证书的 base64格式</param>
+            <param name="certPwd">证书密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.GetPublicKeyFromPkcs12(System.Byte[],System.Char[])">
+            <summary>
+            获取RSA公钥
+            </summary>
+            <param name="p12CertData">P12/PFX证书</param>
+            <param name="certPwdData">证书密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.GetPublicKeyFromX509(System.String)">
+            <summary>
+            获取RSA公钥
+            </summary>
+            <param name="x509Cert">x509通用证书base64格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.GetPublicKeyFromX509(System.Byte[])">
+            <summary>
+            获取RSA公钥
+            </summary>
+            <param name="x509CertData">x509通用证书</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.EncryptWithX509(System.String,System.Byte[],System.String)">
+            <summary>
+            公钥加密
+            </summary>
+            <param name="x509Cert">x509通用证书base64格式</param>
+            <param name="contentData">待加密的数据</param>
+            <param name="algorithm">加密算法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.EncryptWithX509(System.Byte[],System.Byte[],System.String)">
+            <summary>
+            公钥加密
+            </summary>
+            <param name="x509CertData">x509通用证书</param>
+            <param name="contentData">待加密的数据</param>
+            <param name="algorithm">加密算法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.EncryptWithPublicKey(System.String,System.Byte[],System.String)">
+            <summary>
+            公钥加密
+            </summary>
+            <param name="publicKey">RSA公钥 base64格式</param>
+            <param name="contentData">待加密的数据</param>
+            <param name="algorithm">加密算法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.EncryptWithPublicKey(System.String,System.String,System.String,System.String)">
+            <summary>
+            公钥加密
+            </summary>
+            <param name="publicKey">RSA公钥 base64格式</param>
+            <param name="contentData">待加密的数据</param>
+            <param name="encoding">解密出来的数据编码格式，默认UTF-8</param>
+            <param name="algorithm">加密算法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.EncryptWithPublicKey(System.Byte[],System.Byte[],System.String)">
+            <summary>
+            公钥加密
+            </summary>
+            <param name="publicKey">RSA公钥</param>
+            <param name="contentData">待加密的数据</param>
+            <param name="algorithm">加密算法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.DecryptWithPkcs12(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="p12Cert">P12/PFX证书的 base64格式</param>
+            <param name="certPwd">证书密码</param>
+            <param name="content">待解密数据 base64格式</param>
+            <param name="encoding">解密出来的数据编码格式，默认UTF-8</param>
+            <param name="algorithm">加密算法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.DecryptWithPkcs12(System.Byte[],System.Char[],System.Byte[],System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="p12Data">P12/PFX证书</param>
+            <param name="certPwdData">证书密码</param>
+            <param name="contentData">待解密数据</param>
+            <param name="algorithm">加密算法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.DecryptWithPrivateKey(System.String,System.String,System.String,System.String)">
+            <summary>
+            私钥解密
+            </summary>
+            <param name="privateKey">RSA私钥  base64格式</param>
+            <param name="content">待解密数据 base64格式</param>
+            <param name="encoding">解密出来的数据编码格式，默认UTF-8</param>
+            <param name="algorithm">加密算法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.DecryptWithPrivateKey(System.Byte[],System.Byte[],System.String)">
+            <summary>
+            私钥解密
+            </summary>
+            <param name="privateKey">RSA私钥</param>
+            <param name="contentData">待解密数据</param>
+            <param name="algorithm">加密算法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.EncryptWithPrivateKey(System.String,System.Byte[],System.String)">
+            <summary>
+            私钥加密
+            </summary>
+            <param name="privateKey">RSA私钥 base64格式</param>
+            <param name="contentData">待加密的数据</param>
+            <param name="algorithm">加密算法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.EncryptWithPrivateKey(System.String,System.String,System.String,System.String)">
+            <summary>
+            私钥加密
+            </summary>
+            <param name="privateKey">RSA私钥 base64格式</param>
+            <param name="contentData">待加密的数据</param>
+            <param name="encoding">数据编码格式</param>
+            <param name="algorithm">加密算法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.EncryptWithPrivateKey(System.Byte[],System.Byte[],System.String)">
+            <summary>
+            私钥加密
+            </summary>
+            <param name="privateKey">RSA私钥</param>
+            <param name="contentData">待加密的数据</param>
+            <param name="algorithm">加密算法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.DecryptWithPublicKey(System.String,System.String,System.String,System.String)">
+            <summary>
+            公钥解密
+            </summary>
+            <param name="publicKey">RSA公钥  base64格式</param>
+            <param name="content">待解密数据 base64格式</param>
+            <param name="encoding">解密出来的数据编码格式，默认UTF-8</param>
+            <param name="algorithm">加密算法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.DecryptWithPublicKey(System.Byte[],System.Byte[],System.String)">
+            <summary>
+            公钥解密
+            </summary>
+            <param name="publicKey">RSA公钥</param>
+            <param name="contentData">待解密数据</param>
+            <param name="algorithm">加密算法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.GeneratePFX(System.String,System.Byte[],System.Byte[],System.Byte[],System.String)">
+            <summary>
+            根据crt以及RSA私钥生成pfx证书
+            </summary>
+            <param name="passWord">证书密码</param>
+            <param name="x509CertData">crt证书</param>
+            <param name="privateKey">Rsa私钥</param>
+            <param name="x509CertChainData">证书链</param>
+            <param name="alias">默认别名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.RSAPkcs12Helper.GetBase64RsaKeyPair(System.Int32)">
+            <summary>
+            生成base64密钥串
+            </summary>
+            <param name="strength">密钥位数 1024或2048</param>
+            <returns></returns>
+        </member>
+        <member name="T:Alex.Kingdee.Core.Security.Utils.MD5Helper">
+            <summary>
+            安全相关
+            </summary>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.MD5Helper.GetMD5_32(System.String,System.Text.Encoding)">
+            <summary>
+            获取32位长度的Md5摘要
+            </summary>
+            <param name="inputStr"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Alex.Kingdee.Core.Security.Utils.MD5Helper.GetMd5(System.String,System.Text.Encoding)">
+            <summary>
+            获取MD5值
+            </summary>
+            <param name="inputStr"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
