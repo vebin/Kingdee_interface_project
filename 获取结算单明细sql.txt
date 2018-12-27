@@ -1,0 +1,12 @@
+select b1.FNUMBER as materNum,b.FNAME as materName,c.FNAME as unit,FPRICEQTY as realWeight,F_SHA_REALQTYD as settlementWeight,
+F_SHA_NOTAXPRICE as clientSettleNotaxPrice,FAMOUNTFOR as clientSettleNotaxAmount,a.FAUXPRICE as clientNotaxPrice,F_SHA_PurchasePrice as upSuppersettleTaxprice,FDETAILTAXAMOUNTFOR as clientNotaxAmount,
+FAUXTAXPRICE as clientSettleweightTaxprice,FALLAMOUNTFOR as clientSettletotalPrice,FNOTAXAMOUNT as clientNotaxLocalamount , FALLAMOUNT as clientNotaxLocalamount,FDETAILTAXAMOUNT as clientTaxLocal,
+FTAXRATE as clientTaxrate,F_SHA_PURCHASEAMOUNTD as upSuppersettleTotalamount,F_SHA_MAYPAYAMOUNT as useInterimpayment,F_SHA_GROSSPROFIT as grossMargin,FCOSTAMTSUM as clientCostamount,
+F_SHA_RECEIVEDAMOUNTD as amountReceived
+from  T_IV_SALESICENTRY a
+left join T_IV_SALESICENTRY_O a1 on a.FENTRYID = a1.FENTRYID
+left join T_IV_SALESIC a2 on a.fid = a2.fid
+left join T_BD_MATERIAL_L b on a.FMATERIALID = b.FMATERIALID
+left join T_BD_MATERIAL b1 on a.FMATERIALID = b1.FMATERIALID
+left join T_BD_UNIT_L c on a.FPRICEUNITID = c.FUNITID
+where FBILLNO like '%%'
