@@ -63,11 +63,12 @@ namespace WebApi.Controllers
             //查询客户数量
             JArray custQty = reportExecSql.getCustomerQty(orgNum,null);
             JArray orderQty = reportExecSql.getorderqty(orgNum, null);
-
+            int custQty_temp = 0;
             foreach (JObject item in custQty)
             {
-                custQty_value = item["custqty"].ToString();
+                custQty_temp++;
             }
+            custQty_value = custQty_temp.ToString();
             foreach (JObject item in orderQty)
             {
                 orderamount_value = item["amount"].ToString();

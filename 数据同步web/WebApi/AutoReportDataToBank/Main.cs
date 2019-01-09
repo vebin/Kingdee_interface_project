@@ -28,7 +28,7 @@ namespace AutoReportDataToBank
                 try
                 {
                     HttpHelper get = new HttpHelper();
-                    string result = get.Get("http://118.122.122.35:9081/api/report?orgNum=100");
+                    string result = get.Get("http://localhost:9081/api/report?orgNum=100");
                     if(result == "{\"code\":\"200\"}")
                     {
                         listBox1.Items.Add(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + ":" + "执行成功");
