@@ -16,9 +16,9 @@ namespace downData
         //参数为组织number
         public static JArray getCustomerQty(string orgNum,string filter)
         {
-            string sql = "select count(*) as custqty from T_BD_CUSTOMER a" +
-                " left join T_ORG_ORGANIZATIONS b on a.FUSEORGID = b.FORGID" +
-                " where b.FNUMBER = '"+ orgNum + "' and  a.FFORBIDSTATUS = 'A' ";
+            string sql = "select count(*) as custqty from t_PUR_POOrder a" +
+                " left join T_ORG_ORGANIZATIONS b on a.FPURCHASEORGID = b.FORGID" +
+                " where b.FNUMBER = '"+ orgNum + "' and  a.FDOCUMENTSTATUS = 'C' ";
             if(filter != null)
             {
                 sql = sql + "and " + filter;

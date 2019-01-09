@@ -11,9 +11,9 @@ using Utils;
 
 namespace AutoReportDataToBank
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }
@@ -33,10 +33,14 @@ namespace AutoReportDataToBank
                     {
                         listBox1.Items.Add(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + ":" + "执行成功");
                     }
+                    else
+                    {
+                        listBox1.Items.Add(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + ":" + "执行失败："+ result);
+                    }
                 }
-                catch
+                catch(Exception ex)
                 {
-
+                    listBox1.Items.Add(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + ":" + "执行异常：" + ex.Message);
                 }
             }
         }

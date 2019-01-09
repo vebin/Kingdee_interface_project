@@ -7,3 +7,12 @@ E:\顺宏安结算单接口方案\数据同步web\WebApi\AutoReportDataToBank\bi
 E:\顺宏安结算单接口方案\数据同步web\WebApi\AutoReportDataToBank\bin\Debug\电商接口自动同步程序.pdb
 E:\顺宏安结算单接口方案\数据同步web\WebApi\AutoReportDataToBank\obj\Debug\电商接口自动同步程序.exe
 E:\顺宏安结算单接口方案\数据同步web\WebApi\AutoReportDataToBank\obj\Debug\电商接口自动同步程序.pdb
+E:\顺宏安结算单接口方案\shun_hongan_interface_project\数据同步web\WebApi\AutoReportDataToBank\bin\Debug\电商接口自动同步程序.exe.config
+E:\顺宏安结算单接口方案\shun_hongan_interface_project\数据同步web\WebApi\AutoReportDataToBank\bin\Debug\电商接口自动同步程序.exe
+E:\顺宏安结算单接口方案\shun_hongan_interface_project\数据同步web\WebApi\AutoReportDataToBank\bin\Debug\电商接口自动同步程序.pdb
+E:\顺宏安结算单接口方案\shun_hongan_interface_project\数据同步web\WebApi\AutoReportDataToBank\obj\Debug\AutoReportDataToBank.Properties.Resources.resources
+E:\顺宏安结算单接口方案\shun_hongan_interface_project\数据同步web\WebApi\AutoReportDataToBank\obj\Debug\AutoReportDataToBank.csproj.GenerateResource.cache
+E:\顺宏安结算单接口方案\shun_hongan_interface_project\数据同步web\WebApi\AutoReportDataToBank\obj\Debug\AutoReportDataToBank.csproj.CoreCompileInputs.cache
+E:\顺宏安结算单接口方案\shun_hongan_interface_project\数据同步web\WebApi\AutoReportDataToBank\obj\Debug\电商接口自动同步程序.exe
+E:\顺宏安结算单接口方案\shun_hongan_interface_project\数据同步web\WebApi\AutoReportDataToBank\obj\Debug\电商接口自动同步程序.pdb
+E:\顺宏安结算单接口方案\shun_hongan_interface_project\数据同步web\WebApi\AutoReportDataToBank\obj\Debug\AutoReportDataToBank.Main.resources

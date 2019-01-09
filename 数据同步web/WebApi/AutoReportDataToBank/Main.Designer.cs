@@ -1,6 +1,6 @@
 ﻿namespace AutoReportDataToBank
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.hour = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.minute = new System.Windows.Forms.TextBox();
